@@ -1,0 +1,49 @@
+<main class="relative w-screen h-screen overflow-hidden bg-[#050807] text-[#e0e7e1] font-persian">
+  <!-- 3D Open World Three.js Canvas -->
+  <app-game-canvas class="absolute inset-0 z-0" />
+
+  <!-- Ambient Immersive Glow & Subtle Scanlines Overlay -->
+  <div class="absolute inset-0 opacity-15 pointer-events-none immersive-glow z-[5]"></div>
+  <div class="absolute inset-0 opacity-10 pointer-events-none immersive-scanlines z-[6]"></div>
+
+  <!-- In-Game HUD -->
+  @if (gameState.isGameStarted() && !gameState.isPaused()) {
+    <app-hud class="absolute inset-0 z-10" />
+  }
+
+  <!-- Main Menu / Pause Menu -->
+  @if (!gameState.isGameStarted() || gameState.isPaused()) {
+    <app-main-menu class="absolute inset-0 z-40" />
+  }
+
+  <!-- First-Person Chemistry Minigame Modal -->
+  @if (gameState.isChemistryOpen()) {
+    <app-chemistry-lab class="relative z-50" />
+  }
+
+  <!-- Laundering & Shell Companies Network Modal -->
+  @if (gameState.isLaunderingOpen()) {
+    <app-laundering-modal class="relative z-50" />
+  }
+
+  <!-- Graphics & Performance Settings Modal -->
+  @if (gameState.isSettingsOpen()) {
+    <app-settings-modal class="relative z-50" />
+  }
+
+  <!-- Game Design Document (GDD) Modal -->
+  @if (gameState.isGddOpen()) {
+    <app-gdd-modal class="relative z-50" />
+  }
+
+  <!-- Albuquerque World Map Modal -->
+  @if (gameState.isMapOpen()) {
+    <app-world-map class="relative z-50" />
+  }
+
+  <!-- Story Character Dialogue Overlay -->
+  @if (gameState.isDialogueOpen()) {
+    <app-dialogue-overlay class="relative z-50" />
+  }
+</main>
+

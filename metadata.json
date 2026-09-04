@@ -1,0 +1,6 @@
+{
+  "name": "Heisenberg: Empire Business",
+  "description": "An open-world action-adventure crime simulation game set in Albuquerque, featuring third-person exploration, first-person chemistry minigames, laundering networks, and DEA heat management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

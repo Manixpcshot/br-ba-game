@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-vazir: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Chakra Petch', monospace, sans-serif;
+    --font-cinzel: 'Cinzel', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-bg: #050807;
+    --color-emerald-accent: #2ecc71;
+    --color-emerald-dark: #0a2e1c;
+    --color-text-primary: #e0e7e1;
+  }
+
+  body {
+    font-family: var(--font-vazir);
+    background-color: #050807;
+    color: #e0e7e1;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-persian {
+  font-family: var(--font-vazir);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Desert/Hazmat Theme Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050807;
+}
+::-webkit-scrollbar-thumb {
+  background: #2ecc71;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #27ae60;
+}
+
+/* Immersive Ambient Glow & Scanlines */
+.immersive-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(46, 204, 113, 0.08) 2px
+  );
+  pointer-events: none;
+}
+
+.immersive-glow {
+  background: radial-gradient(circle at 50% 50%, #2ecc71 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* CRT / Cinematic Scanlines Overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
